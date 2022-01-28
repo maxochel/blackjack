@@ -42,7 +42,7 @@ function Stand() {
 
   if (BotCardsSum == PlayerCardsSum) {
       document.querySelector(".battle-ground").innerText = "Draw!";
-  } else if (BotCardsSum == 21 || PlayerCardsSum < 21) {
+  } else if (BotCardsSum == 21 && PlayerCardsSum < 21 || BotCardsSum > PlayerCardsSum && BotCardsSum < 21) {
     document.querySelector(".battle-ground").innerText = "You Lose!"; }
   else { document.querySelector(".battle-ground").innerText = "You Win!!!"; }
 }
